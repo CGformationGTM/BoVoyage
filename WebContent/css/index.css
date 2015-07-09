@@ -1,0 +1,93 @@
+@CHARSET "ISO-8859-1";
+
+#bienvenue{
+  position: absolute;
+  left: 50%;
+  margin-left: -450px;
+  width: 1000px;
+  height: 600px;
+  z-index: 1;
+  background-color: red;
+}
+
+#bovoyage{
+  background-color: black;
+  color : white;
+  width: 100%;
+  height: 15%;
+  float: left;
+}
+
+#identification{
+  width: 20%;
+  background-color: rgb(72, 190, 164);
+  position: absolute;
+  top : 0px;
+  right : 0px
+  }
+ 	
+
+#menu1{
+	width: 100%;
+  height: 100%;
+  background-color: rgb(72, 190, 164);
+}
+
+#menu{
+  width: 1000px;
+  height: 10%;
+  background-color: green;
+  position: absolute;
+  bottom : 0%; 
+}
+
+#main{
+  background-color: grey;
+  width: 1000px;
+  height: 1200px;
+  top: 579px;
+  position: absolute;
+  left: 50%;
+  margin-left: -450px;	
+}
+
+#pied{
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom : 0%;
+  background-color: yellow;
+}
+
+#accueil{
+	width: 80%;
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  margin-left: -400px;
+}
+
+.option{
+	width : 16%;
+	text-align:center;
+	  font-size: x-large;
+	  margin-top: 14px;
+	  margin-left: 0px;
+	  float: left;
+	  color: white;
+	  border-right-color: blue;
+	  border-right-style: dotted;
+	  
+	
+}
+
+
+#menu > ul:hover li{
+	display: block;
+}
+
+#menu ul {
+	list-style-type: none;
+	display : none
+}
+

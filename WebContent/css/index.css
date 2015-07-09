@@ -19,11 +19,14 @@
 }
 
 #identification{
-  width: 20%;
+  width: 198px;
+  height: 20px;
   background-color: rgb(72, 190, 164);
   position: absolute;
   top : 0px;
-  right : 0px
+  right : 0px;
+  border-radius: 0 0 0 5px;
+  text-align: center;
   }
  	
 
@@ -91,3 +94,13 @@
 	background-color: rgb(72, 190, 164);
 }
 
+#connexion{
+	background-color: rgb(72, 190, 164);
+	display: none;
+	height: 80px;
+	border-radius: 0 0 0 5px;
+}
+
+#ok{
+	  width: 63px;
+}

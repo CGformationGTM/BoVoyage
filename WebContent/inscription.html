@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" href="css/form.css" type="text/css">
+<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/image.js"></script>
+<script type="text/javascript" src="js/form.js"></script>
+<script type="text/javascript" src="js/renvoi.js"></script>
+
+
+</head>
+<body id="body">
+
+<header id="bienvenue">
+	<div id="bovoyage">
+		<h1>BoVoyage</h1>
+		<div id="identification">Se connecter
+			<div id="connexion">
+				<input type="text" id="user" placeholder="Identifiant" />
+				<input type="password" id="pswd" placeholder="Mot de Passe"/>
+				<button id="ok">Log in</button>
+				<a id="linkInscription" href="inscription.html">Créer un compte</a>
+			</div>
+		</div>
+	</div>
+	
+<img alt="accueil" id="image" src="image/image1.jpg">
+
+<nav id="menu">
+	<div id ="menu1">
+	<div class="option" id="destination" class="deroulant">Destination 
+		<ul id="liste_destination">
+			<li><a href="#">Europe</a></li>
+			<li><a href="#">Asie</a></li>
+			<li><a href="#">Afrique du Nord</a></li>
+			<li><a href="#">Afrique du Nord</a></li>
+			<li><a href="#">Amérique</a></li>
+		</ul>
+	</div>
+<div class="option" id="voyage" class="deroulant">Voyage
+		<ul id="liste_voyage">
+			<li><a href="#">Avion</a></li>
+			<li><a href="#">Hotel</a></li>
+			<li><a href="#">Avion + hotel</a></li>
+			<li><a href="#">Avion + voiture</a></li>
+			<li><a href="#">Avion + hotel + voiture</a></li>
+		</ul>
+	</div>
+	<div class="option" id="derniereminute">Dernière minute </div>
+</div>
+
+</nav>
+</header>
+
+
+
+
+<div id="main">
+<h2>Creez votre compte</h2>
+<!-- Formulaire identité -->
+	
+	<form method="post" action="http://192.168.1.28:8080/echo" autocomplete="on">
+	<fieldset>
+			<legend>Identifiant</legend>
+		<label for="mail">Adresse e-mail </label>
+			<input name="mail" id="mail" type="email" placeholder="Votre adresse e-mail" required="required"> <span class="etoile">*</span>
+				<span id="err_mail" class="erreur" style="visibility: hidden">Vous devez saisir votre adresse e-mail</span>
+				<br/>
+		<label for="mdp">Mot de Passe</label> 
+			<input name="mdp" id="mdp" placeholder="Votre mot de passe" type="Password" required="required"> <span class="etoile">*</span>
+				<span id="err_mdp" class="erreur" style="visibility: hidden">Vous devez saisir votre mot de passe</span>
+				<br/>
+		<label for="mdpBis">Répettez votre mot de passe</label>
+			<input name="mdpBis" id="mdpBis" type="password" required="required" placeholder="Votre mot de passe"> <span class="etoile">*</span>
+				<span id="err_mdpBis" class="erreur" style="visibility: hidden">Mot de passe différent!</span>
+				<br/>
+	</fieldset>
+	<fieldset>
+			<legend>Identité</legend>
+		<label for="nom">Nom : </label>
+			<select name="civilite" required="required">
+				<option value="M.">M.</option>
+				<option value="Mme">Mme</option>
+				<option value="Mle">Mle</option>
+				</select>
+			<input name="nom" id="nom" placeholder="Votre nom" required="required"> <span class="etoile">*</span>
+				<span id="err_nom" class="erreur" style="visibility: hidden">Veuillez saisir votre nom</span><br>
+		<label for="prenom">Prénom :</label> 
+			<input name="prenom" id="prenom" placeholder="Votre prénom" required="required"> <span class="etoile">*</span>
+				<span id="err_prenom" class="erreur" style="visibility: hidden">Veuillez saisir votre prénom</span><br>
+		<label for="date">Date de Naissance : </label>
+			<input name="date" id="date" type="date"><br>
+	</fieldset>
+	
+	
+<!-- Formulaire adresse	 -->
+
+	
+	<fieldset>
+			<legend>Adresse</legend>
+		<label for="Rue">Rue : </label>
+			<input name="rue" id="rue" required="required"> <span class="etoile">*</span>
+				<span id="err_rue" class="erreur" style="visibility: hidden">Veuillez saisir votre adresse</span><br>
+		<label for="complement">Complément :</label> 
+			<input name="complement" id="complement"><br>
+		<label for="code postal">Code postal : </label>
+			<input name="code" id="code" pattern=[0-9]{5} required="required"> <span class="etoile">*</span>
+				<span id="err_code" class="erreur" style="visibility: hidden">Veuillez saisir votre code postal</span><br>
+		<label for="ville" >Ville : </label>
+			<input name="ville" id="ville" required="required"> <span class="etoile">*</span>
+				<span id="err_ville" class="erreur" style="visibility: hidden">Veuillez saisir votre ville</span><br>	
+	</fieldset>
+	<br>
+	<button id="bouton">S'inscrire</button>
+	
+	</form>
+
+<div id="promo"></div>
+<div id="lastminute"></div>
+<footer id="pied"><h1>footer</h1></footer>
+</div>
+
+</body>
+</html>

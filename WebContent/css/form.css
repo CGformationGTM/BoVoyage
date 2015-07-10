@@ -1,0 +1,52 @@
+form{
+	width: 700px
+}
+
+label{
+	float: left;
+	width: 200px;
+}
+
+input{
+	width: 180px;
+}
+
+#nom{
+	width: 120px;
+}
+
+.erreur{
+	color: rgb(5, 17, 76);
+}
+
+.required{
+	color: red;
+}
+
+fieldset{
+	border :none;
+	margin-bottom: 10px;
+}
+ legend {
+ 	color : rgb(5, 17, 76);
+ 	font-weight: bold;
+ }
+
+ h2{
+ color : rgb(5, 17, 76);
+ }
+ 
+ #bouton{
+ 	background-color: rgb(9, 34, 134);
+ 	color : white;
+ 	font-weight: bold;
+ 	border-radius : 5px;
+ 	  padding: 5px;
+  position: relative;
+  left: 327px;
+  box-shadow: 1px 1px 1px grey;
+ }
+ 
+ #bouton:hover{
+ background-color: blue;
+ }

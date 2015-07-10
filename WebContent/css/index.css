@@ -7,7 +7,7 @@
   width: 1000px;
   height: 600px;
   z-index: 1;
-  background-color: red;
+  background-color: white;
 }
 
 #bovoyage{
@@ -16,6 +16,7 @@
   width: 100%;
   height: 15%;
   float: left;
+  cursor: pointer;
 }
 
 #identification{
@@ -45,24 +46,25 @@
 }
 
 #main{
-  background-color: grey;
+  background-color: white;
   width: 1000px;
-  height: 1200px;
-  top: 579px;
+  top: 600px;
   position: absolute;
   left: 50%;
-  margin-left: -450px;	
+  margin-left: -450px;
 }
 
 #pied{
   position: absolute;
   width: 100%;
   height: 100px;
-  bottom : 0%;
-  background-color: yellow;
+  top : 100%;
+  background-color: black;
+  color : white;
+  margin-top : 50px;
 }
 
-#accueil{
+#image{
 	width: 80%;
   position: absolute;
   top: 18%;
@@ -81,8 +83,7 @@
 	  border-right-color: blue;
 	  border-right-style: dotted;
 	  cursor : pointer;
-	  
-	
+	  	
 }
 
 
@@ -92,6 +93,7 @@
 	position: relative;
 	bottom: 0px;
 	background-color: rgb(72, 190, 164);
+	font-size: large;
 }
 
 #connexion{
@@ -103,4 +105,9 @@
 
 #ok{
 	  width: 63px;
+}
+
+h1{
+	position : relative;
+	left : 50px;
 }

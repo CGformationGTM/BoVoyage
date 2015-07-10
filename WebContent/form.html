@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Formulaire</title>
+<link rel="stylesheet" href="css/form.css" type="text/css"><script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="js/form.js"></script>
+
+
+</head>
+
+
+<body id="body">
+<!-- Formulaire identité -->
+	
+	<form method="post" action="http://192.168.1.28:8080/echo" autocomplete="on">
+	<fieldset>
+			<legend>Identifiant</legend>
+		<label for="mail">Adresse e-mail </label>
+			<input name="mail" id="mail" type="email" placeholder="Votre adresse e-mail" required="required"> <span class="etoile">*</span>
+				<span id="err_mail" class="erreur" style="visibility: hidden">Vous devez saisir votre adresse e-mail</span><br/>
+		<label for="mdp">Mot de Passe</label> 
+			<input name="mdp" id="mdp" placeholder="Votre mot de passe" type="Password" required="required"> <span class="etoile">*</span>
+				<span id="err_mdp" class="erreur" style="visibility: hidden">Vous devez saisir votre mot de passe</span><br/>
+		<label for="mdpBis">Répettez votre mot de passe</label>
+			<input name="mdpBis" id="mdpBis" type="password" required="required" placeholder="Votre mot de passe"> <span class="etoile">*</span>
+				<span id="err_mdpBis" class="erreur" style="visibility: hidden">Mot de passe différent!</span><br/>
+	</fieldset>
+	<fieldset>
+			<legend>Identité</legend>
+		<label for="nom">Nom : </label>
+			<select name="civilite" required="required">
+				<option value="M.">M.</option>
+				<option value="Mme">Mme</option>
+				<option value="Mle">Mle</option>
+				</select>
+			<input name="nom" id="nom" placeholder="Votre nom" required="required"> <span class="etoile">*</span>
+				<span id="err_nom" class="erreur" style="visibility: hidden">Veuillez saisir votre nom</span><br>
+		<label for="prenom">Prénom :</label> 
+			<input name="prenom" id="prenom" placeholder="Votre prénom" required="required"> <span class="etoile">*</span>
+				<span id="err_prenom" class="erreur" style="visibility: hidden">Veuillez saisir votre prénom</span><br>
+		<label for="date">Date de Naissance : </label>
+			<input name="date" id="date" type="date"><br>
+	</fieldset>
+	
+	
+<!-- Formulaire adresse	 -->
+
+	
+	<fieldset>
+			<legend>Adresse</legend>
+		<label for="Rue">Rue : </label>
+			<input name="rue" id="rue" required="required"> <span class="etoile">*</span>
+				<span id="err_rue" class="erreur" style="visibility: hidden">Veuillez saisir votre adresse</span><br>
+		<label for="complement">Complément :</label> 
+			<input name="complement" id="complement"><br>
+		<label for="code postal">Code postal : </label>
+			<input name="code" id="code" pattern=[0-9]{5} required="required"> <span class="etoile">*</span>
+				<span id="err_code" class="erreur" style="visibility: hidden">Veuillez saisir votre code postal</span><br>
+		<label for="ville" >Ville : </label>
+			<input name="ville" id="ville" required="required"> <span class="etoile">*</span>
+				<span id="err_ville" class="erreur" style="visibility: hidden">Veuillez saisir votre ville</span><br>	
+	</fieldset>
+	<br>
+	<button>Envoyer</button>
+	
+	</form>
+
+</body>
+</html>

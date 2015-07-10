@@ -1,9 +1,16 @@
 var affich = false;
+var enFocus = false;
 
 $(document).ready(function(){
 	$("#destination, #voyage").mouseover(dessus);
 	$("#destination, #voyage").mouseleave(pasDessus);
-	$("#identification").hover(mouseEnterId,mouseOutId);
+	$("#identification").mouseover(mouseEnterId);
+	$("#identification").mouseleave(mouseOutId);
+	$("#connexion > input").focusin(function(){enFocus=true;});
+	$("#connexion > input").focusout(function(){
+		enFocus=false;
+		mouseOutId();
+		});
 });
 
 function dessus(){
@@ -23,13 +30,22 @@ function pasDessus(){
 }
 
 function mouseEnterId(){
-	$(this).animate({ width : 215, height : 30},100);
-	$(this).css("border-radius", "0 0 0 0");
-	$("#connexion").slideToggle(true);
+	if(!affich){
+		$(this).animate({ width : 215, height : 30},100);
+		$(this).css("border-radius", "0 0 0 0");
+		$("#connexion").slideToggle(true);
+		affich=true;
+	}
 }
 
 function mouseOutId(){
-	$(this).animate({ width : 198, height : 20},100);
-	$(this).css("border-radius", "0 0 0 5px");
-	$("#connexion").slideToggle(false);
+	if(enFocus){
+		return;
+	}
+	if(affich){
+		$(this).animate({ width : 198, height : 20},100);
+		$(this).css("border-radius", "0 0 0 5px");
+		$("#connexion").slideToggle(false);
+		affich=false;
+	}
 }

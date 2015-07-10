@@ -47,19 +47,22 @@
 #main{
   background-color: grey;
   width: 1000px;
-  height: 1200px;
+/*   height: 1714px; */
   top: 579px;
   position: absolute;
   left: 50%;
-  margin-left: -450px;	
+  margin-left: -450px;
+  padding-top: 50px;
+  text-align: center;	
 }
 
 #pied{
   position: absolute;
   width: 100%;
   height: 100px;
-  bottom : 0%;
+  top: 100%;
   background-color: yellow;
+  margin-top: 50px;
 }
 
 #accueil{
@@ -103,4 +106,25 @@
 
 #ok{
 	  width: 63px;
+}
+
+.offre{
+  width: 375px;
+  height: 301px;
+  background-color: pink;
+  margin-left: 74px;
+  display: inline-block;
+  margin-top: 49px;
+}
+
+.bandeauL{
+	position: absolute;
+	z-index: 2;
+	left: 121px;
+}
+
+.bandeauR{
+	position: absolute;
+	z-index: 2;
+	left: 574px;	
 }
